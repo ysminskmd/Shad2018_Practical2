@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- this is a comment -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shad.shad2018_practical2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -16,13 +19,59 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="net.hockeyapp.android.appIdentifier"
             android:value="${HOCKEYAPP_APP_ID}" />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="8019aef7d536cf0eec26d9403fec140cbce657fb" />
+
+        <activity android:name=".SecondActivity">
+
+            <!-- android:parentActivityName=".MainActivity" -->
+
+            <intent-filter>
+                <action android:name="run.activity.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ThirdActivity">
+            <intent-filter>
+                <action android:name="run.activity.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyIntentService"
+            android:enabled="false"
+            android:exported="true">
+
+                <intent-filter>
+                    <action android:name="run.service.action" />
+                </intent-filter>
+
+            </service>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <receiver
+            android:name=".BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
