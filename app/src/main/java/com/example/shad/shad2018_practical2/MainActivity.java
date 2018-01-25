@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
-        setContentView(R.layout.frame_layout_rectangle);
+        setContentView(R.layout.linear_layout);
     }
 }
