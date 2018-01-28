@@ -10,3 +10,6 @@ https://developer.android.com/guide/topics/ui/declaring-layout.html?hl=ru
 7. ConstraintLayout - https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html
 8. ConstraintLayout - https://habrahabr.ru/company/touchinstinct/blog/326814/
 9. Create App Icons with Image Asset Studio - https://developer.android.com/studio/write/image-asset-studio.html 
+10. Styles and Themes - https://developer.android.com/guide/topics/ui/look-and-feel/themes.html
+11. Design App Themes - https://developer.android.com/studio/write/theme-editor.html
+12. Localizing with Resources - https://developer.android.com/guide/topics/resources/localization.html
